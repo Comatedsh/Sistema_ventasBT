@@ -27,6 +27,20 @@ class DatabaseSeeder extends Seeder
         $roles = new rol();
         $roles->tipo_rol = 'Administrador';
         $roles->save();
+        
+         $proveedor = new provedor();
+        $proveedor->nombrep = 'brandon';
+        $proveedor->correo = 'brandon@gmail.com';
+        $proveedor->rfc = '13231';
+        $proveedor->direccion = 'fraccionamiento san mrtin 1';
+        $proveedor->save();
+
+
+        $marca = new marca();
+        $marca->nombre = 'nike';
+        $marca->origen = 'china';
+        $marca->id_provedor = '1';
+        $marca->save();
 
         $roles = new rol();
         $roles->tipo_rol = 'Cliente';
